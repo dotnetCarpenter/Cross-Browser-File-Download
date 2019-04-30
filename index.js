@@ -28,7 +28,7 @@ function downloadFile (filePath) {
         function (readerBlob) { // Safari
           var reader = readerBlob.reader
           var url = reader.result
-          console.log('Safari', reader)
+          console.log('Safari', readerBlob)
 
           saveFile(url, fileName)
         }
