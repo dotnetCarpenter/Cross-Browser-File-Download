@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "ecstatic --port 9000 docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "terser index.js --output index.min.js",
+    "postbuild": "cp index.min.js docs/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ecstatic": "^3.3.0"
+    "ecstatic": "^3.3.0",
+    "terser": "^3.17.0"
   },
   "dependencies": {}
 }
