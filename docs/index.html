@@ -41,6 +41,10 @@
     .support__fail, #error {
       background-color: red;
     }
+
+    .log__odd {
+      background-color: grey;
+    }
   </style>
 </head>
 <body>
@@ -60,8 +64,8 @@
     console = console || {}
     console.log = function () {
       var log = document.getElementById('log')
-      Array.prototype.forEach.call(arguments, function (x) {
-        log.innerHTML += '<li>' + JSON.stringify(x) + '</li>'
+      Array.prototype.forEach.call(arguments, function (x, i) {
+        log.innerHTML += '<li class="log__' + i % 2 ? 'odd' : 'event' + '">' + JSON.stringify(x) + '</li>'
       })
     }
   </script>
