@@ -144,6 +144,7 @@
 
     function handler (f, form, event) {
       event.preventDefault()
+      console.log(form.querySelector('.download--filename:checked').value)
       f(form.querySelector('.download--filename:checked').value)
     }
 

@@ -58,7 +58,7 @@ function saveFile (file, fileName) {
 
   document.body.appendChild(a)
 
-  a.click()
+  // a.click()
 
   a.parentNode.removeChild(a)
 }
