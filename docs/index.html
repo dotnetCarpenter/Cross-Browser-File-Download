@@ -43,7 +43,7 @@
     }
 
     .log__odd {
-      background-color: grey;
+      background-color: lightgray;
     }
   </style>
 </head>
@@ -62,11 +62,13 @@
   </section>
   <script>
     console = console || {}
+    var c = 0
     console.log = function () {
       var log = document.getElementById('log')
-      Array.prototype.forEach.call(arguments, function (x, i) {
-        log.innerHTML += '<li class="log__' + i % 2 ? 'odd' : 'event' + '">' + JSON.stringify(x) + '</li>'
+      Array.prototype.forEach.call(arguments, function (x) {
+        log.innerHTML += '<li class="log__' + (c % 2 ? 'odd' : 'event') + '">' + JSON.stringify(x) + '</li>'
       })
+      c++
     }
   </script>
 
