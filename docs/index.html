@@ -52,6 +52,20 @@
       document.getElementById('error').textContent = (error.lineno || error.lineNumber) + ' ' + error.message
     })
   </script>
+
+  <section>
+    <ol id="log"></ol>
+  </section>
+  <script>
+    console = console || {}
+    console.log = function () {
+      var log = document.getElementById('log')
+      Array.prototype.forEach.call(arguments, function (x) {
+        log.innerHTML += '<li>' + JSON.stringify(x) + '</li>'
+      })
+    }
+  </script>
+
   <h1>&#128229; Cross-browser File Download</h1>
   <form class="download">
     <label>example.48K.pdf
