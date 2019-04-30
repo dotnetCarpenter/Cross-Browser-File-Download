@@ -49,7 +49,7 @@ function downloadFile (filePath) {
 }
 
 function saveFile (file, fileName) {
-  console.log(file)
+  console.log('saveFile', file)
   var a = document.createElement("a")
   a.href = file
   a.style.display = 'none'
