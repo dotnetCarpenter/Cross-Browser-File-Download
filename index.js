@@ -17,7 +17,6 @@ function downloadFile (filePath) {
           var userAgent = navigator.userAgent
           return URL && URL.createObjectURL
             && userAgent.indexOf('Chrom') !== -1 && userAgent.indexOf('Safari') !== -1
-            && false
         },
         function (readerBlob) { // Chrome and Firefox
           console.log('Chrome or Firefox')
