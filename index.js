@@ -69,10 +69,6 @@ function partial (f) {
     : partial.apply(null, [f.bind(null, x)].concat(xs))
 }
 
-function dot (property, object) {
-  return object[property]
-}
-
 function iif (expression, truePart, falsePart) {
   return function (argument) {
     return expression (argument) ? truePart (argument) : falsePart (argument)

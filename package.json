@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ecstatic --port 9000 docs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "terser index.js --output index.min.js",
+    "build": "terser index.js --compress --mangle --output index.min.js",
     "postbuild": "cp index.min.js docs/"
   },
   "keywords": [],
