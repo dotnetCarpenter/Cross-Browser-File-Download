@@ -1,6 +1,7 @@
 'use strict'
 
 function downloadFile (filePath) {
+  console.log(filePath)
   axios.get(filePath, { responseType: 'blob' })
     .then(getBlob)
     .then(function (blob) {
