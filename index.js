@@ -17,6 +17,7 @@ function downloadFile (filePath) {
           var userAgent = navigator.userAgent
           return URL && URL.createObjectURL
             && userAgent.indexOf('Chrom') !== -1 && userAgent.indexOf('Safari') !== -1
+            && false
         },
         function (readerBlob) { // Chrome and Firefox
           var blob = readerBlob.blob
@@ -36,7 +37,7 @@ function downloadFile (filePath) {
 
       var save = msSaveBlobOr(function (blob) {
         var reader = new FileReader
-        reader.onloadend = saveObjectUrlOrDataUrl({
+        reader.onloadend = partial(saveObjectUrlOrDataUrl, {
           reader: reader,
           blob: blob,
           fileName: fileName
