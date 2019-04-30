@@ -28,7 +28,7 @@ function downloadFile (filePath) {
           var reader = readerBlob.reader
           var url = reader.result
 
-          saveFile('ibooks://' + url, fileName)
+          saveFile(url, fileName)
         }
       )
 
