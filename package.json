@@ -1,8 +1,8 @@
 {
-  "name": "FileReader_Chrome",
+  "name": "cross-browser-file-download",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "start": "ecstatic --port 9000",
     "test": "echo \"Error: no test specified\" && exit 1"
