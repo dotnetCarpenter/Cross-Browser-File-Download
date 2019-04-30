@@ -25,6 +25,7 @@ function downloadFile (filePath) {
           URL.revokeObjectURL(url)
         },
         function (readerBlob) { // Safari
+          console.log('Safari')
           var reader = readerBlob.reader
           var url = reader.result
 
