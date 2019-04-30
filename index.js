@@ -20,6 +20,7 @@ function downloadFile (filePath) {
             && false
         },
         function (readerBlob) { // Chrome and Firefox
+          console.log('Chrome or Firefox')
           var blob = readerBlob.blob
           var url = URL.createObjectURL(blob)
 
@@ -27,9 +28,9 @@ function downloadFile (filePath) {
           URL.revokeObjectURL(url)
         },
         function (readerBlob) { // Safari
+          console.log('Safari')
           var reader = readerBlob.reader
           var url = reader.result
-          console.log('Safari', readerBlob)
 
           saveFile(url, fileName)
         }
@@ -59,7 +60,7 @@ function saveFile (file, fileName) {
 
   document.body.appendChild(a)
 
-  // a.click()
+  a.click()
 
   a.parentNode.removeChild(a)
 }
