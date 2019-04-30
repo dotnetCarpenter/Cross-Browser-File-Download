@@ -1,5 +1,7 @@
 # 📥 Cross-Browser File Download
 
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=U2NySlZKRHlZK2xpQkh6SkJYTjlhR051NkoxalBCUnVOYlZYRFN3VmNjND0tLVh5eSs1aDlsV21ibjF0RnZyaGZwM3c9PQ==--d6e14faef933447436705cbb6c75f42cc35dc8c0)](https://www.browserstack.com/automate/public-build/U2NySlZKRHlZK2xpQkh6SkJYTjlhR051NkoxalBCUnVOYlZYRFN3VmNjND0tLVh5eSs1aDlsV21ibjF0RnZyaGZwM3c9PQ==--d6e14faef933447436705cbb6c75f42cc35dc8c0)
+
 FileReader can be used to save PDF file to desk but Chrome needs `a.href = window.URL.createObjectURL(blob)` while iOS needs `a.href = reader.result`.
 
 However, if the PDF only has ASCII characters then you can use
