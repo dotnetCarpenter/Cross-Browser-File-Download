@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ecstatic --port 9000 docs",
+    "start": "cd docs && ws --port 9000",
     "test": "node test/browserstack.js",
     "build": "terser index.js --compress --mangle --output index.min.js",
     "postbuild": "cp index.min.js docs/"
@@ -15,7 +15,7 @@
   "devDependencies": {
     "cucumber": "^5.1.0",
     "dotenv": "^7.0.0",
-    "ecstatic": "^3.3.0",
+    "local-web-server": "^2.6.1",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "terser": "^3.17.0"
   },
